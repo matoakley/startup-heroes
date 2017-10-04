@@ -1,13 +1,35 @@
 <!doctype html>
 <html>
   <head>
+    <% if build? %>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107499549-1"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-107499549-1');
+      </script>
+    <% end %>
+
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Middleman" %></title>
+    <title><%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %></title>
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
+
+    <meta name="google-site-verification" content="MMUllopXGNmi7JoMUzCFbc-Y2NISDq_PIbq-W1PAGfc" />
+
+    <meta property="fb:app_id" content="127232564600204" />
+    <meta property="og:title" content="<%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %>" />
+    <meta property="og:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>" />
+    <meta property="og:site_name" content="Startup Heroes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= current_page.data.url || "http://www.startupheroes.co.uk/" %>" />
+    <meta property="og:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>" />
+    <meta property="og:image:width" content="559" />
+    <meta property="og:image:height" content="157" />
   </head>
   <body>
     <header class="header">
@@ -18,14 +40,14 @@
           <p>Are your development team the <strong>bottleneck</strong> in your software project?</p>
           <p><strong>We've been there!</strong> Our experienced team are ready to help you take the next steps.</p>
         </div>
-        <a href="mailto:m@matthewoakley.co.uk" class="button button--call-to-action">Email Us Now</a>
+        <a href="mailto:hello@startupheroes.co.uk" class="button button--call-to-action">Email Us Now</a>
       </div>
     </header>
     <%= yield %>
     <footer class="footer">
       <div class="container">
         <div>
-          <a class="button button--call-to-action" style="background-color: #36C347;" href="mailto:m@matthewoakley.co.uk">Email Us Now</a>
+          <a class="button button--call-to-action" style="background-color: #36C347;" href="mailto:hello@startupheroes.co.uk">Email Us Now</a>
         </div>
         <div class="footer__copyright">
           Startup Heroes &copy; <%= Date.today.year %> -  Registered in England &amp; Wales 10859977
