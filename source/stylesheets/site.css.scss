@@ -82,6 +82,15 @@ p {
   }
 }
 
+.brand {
+  margin-top: 50px;
+  width: 200px;
+
+  &__image {
+    width: 100%;
+  }
+}
+
 .portfolio {
   display: block;
 

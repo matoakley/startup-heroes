@@ -2,22 +2,23 @@
 <html>
   <head>
     <% if build? %>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107499549-1"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111741699-1"></script>
       <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments)};
-      gtag('js', new Date());
-      gtag('config', 'UA-107499549-1');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-111741699-1');
+        (function(d,h,w){var convertfox=w.convertfox=w.convertfox||[];convertfox.methods=['trackPageView','identify','track','setAppId'];convertfox.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);convertfox.push(e);return convertfox;}};for(var i=0;i<convertfox.methods.length;i++){var c=convertfox.methods[i];convertfox[c]=convertfox.factory(c)}s=d.createElement('script'),s.src="//d3sjgucddk68ji.cloudfront.net/convertfox.min.js",s.async=!0,e=d.getElementsByTagName(h)[0],e.appendChild(s),s.addEventListener('load',function(e){},!1),convertfox.setAppId("y376sy63"),convertfox.trackPageView()})(document,'head',window);
       </script>
     <% end %>
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %></title>
-    <%= stylesheet_link_tag "site" %>
-    <%= javascript_include_tag "site" %>
+    <title><%= current_page.data.title %></title>
+    <meta name="description" content="<%= current_page.data.description %>" />
+    <%= stylesheet_link_tag "new" %>
+    <%= javascript_include_tag "new" %>
 
     <meta name="google-site-verification" content="MMUllopXGNmi7JoMUzCFbc-Y2NISDq_PIbq-W1PAGfc" />
 
@@ -38,28 +39,27 @@
     <meta name="twitter:creator" content="@startupheroesuk">
     <meta name="twitter:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>">
   </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <p>Got an <strong>idea</strong> &amp; <strong>funding</strong> but don't know where to start?</p>
-          <p>Ready to <strong>increase productivity</strong> with <strong>bespoke software</strong>?</p>
-          <p>Are your development team the <strong>bottleneck</strong> in your software project?</p>
-          <p><strong>We've been there!</strong> Our experienced team are ready to help you take the next steps.</p>
-        </div>
-        <a href="mailto:hello@startupheroes.co.uk" class="button button--call-to-action">Email Us Now</a>
-      </div>
+  <body class="<%= page_classes %>">
+    <header class="application-header">
+      <% link_to '/', class: 'application-nav-logo' do %>
+        <% if current_page.data.header == "light" %>
+          <%= image_tag 'startup-heroes-logo.png', class: 'image startup-heroes' %>
+        <% else %>
+          <%= image_tag 'startup-heroes-logo-dark.png', class: 'image startup-heroes' %>
+        <% end %>
+      <% end %>
     </header>
-    <%= yield %>
-    <footer class="footer">
-      <div class="container">
-        <div>
-          <a class="button button--call-to-action" style="background-color: #36C347;" href="mailto:hello@startupheroes.co.uk">Email Us Now</a>
-        </div>
-        <div class="footer__copyright">
-          Startup Heroes &copy; <%= Date.today.year %> -  Registered in England &amp; Wales 10859977
-        </div>
+    <main class="application-main-content">
+      <%= yield %>
+    </main>
+    <footer class="application-footer">
+      <div class="footer-content">
+      </div>
+      <div class="copyright">
+        <strong>&copy; <%= Date.today.year %> Startup Heroes Ltd</strong>
+        <p>Registered in England &amp; Wales 10859977</p>
       </div>
     </footer>
   </body>
 </html>
+

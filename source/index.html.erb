@@ -1,66 +1,115 @@
 ---
-title: Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK
+title: Startup consulting & custom software development company - Startup Heroes
 ---
-
-<div class="experience">
-  <div class="container">
-    <h1 class="heading heading--h1">Experience</h1>
-    <div class="portfolio">
-      <div class="portfolio__item">
-        <%= image_tag 'european-golf-machinery.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">European Golf Machinery</h2>
-        <div class="portfolio__summary">The largest UK based independent manufacturer of golf range machinery have partnered with Startup Heroes to provide an innovative solution to their hardware communications. We have been able to provide a standalone solution to bridge their bespoke serial interface and a universal HTTP interface to attract a broader customer base.</div>
-      </div>
-      <div class="portfolio__item">
-        <%= image_tag 'infabode.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">Infabode</h2>
-        <div class="portfolio__summary">Our Managing Director spent three successful years as CTO of real estate's hottest news platform. During this time the platform has grown from an idea in its founder's bedroom to employing an entire team in Stratford, London. With the company on the brink of a Series A investment, Matt has turned his hand to consultancy with Startup Heroes.</div>
-      </div>
-      <div class="portfolio__item">
-        <%= image_tag 'christies-care.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">Christies Care</h2>
-        <div class="portfolio__summary">We're working with the highly rated national care provider to modernise their training solutions and ensure regulatory compliance. Our consulting has ranged from cloud-based booking systems with SMS communications through to an industry leading learning management system (LMS) with digital certificates and renewal reminders.</div>
-      </div>
+<section class="hero split-layout">
+  <div class="split-layout-secondary">
+    <p class="hero-project-description">
+      Football Administration is revolutionising the way volunteer led sports clubs are run.
+    </p>
+    <div class="hero-project-image" style="background-image: url(<%= image_path 'saxmundham-sports-iphone.png' %>)">
+    </div>
+    <div class="hero-inner-shadow"></div>
+  </div>
+  <div class="split-layout-primary">
+    <div class="split-layout-primary-wrapper">
+      <h1 class="title-primary">We're building apps that change lives.</h1>
+      <p>At Startup Heroes, we have a passion for turning ideas into reality. Our world-class team is fluent in Ruby on Rails, Elixir, React, React Native, iOS, and Android, and we’re ready to design, build, and train so your product is rock-solid and user-friendly.</p>
+      <a href="#" class="button-primary">How can we help you?</a>
     </div>
   </div>
-</div>
+</section>
 
-<div class="products">
-  <div class="container">
-    <h1 class="heading heading--h1">Products</h1>
-    <div class="portfolio">
-      <div class="portfolio__item">
-        <%= image_tag 'football-administration.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">
-          <%= link_to 'Football Administration', 'https://www.footballadministration.com' %>
-        </h2>
-        <div class="portfolio__summary">Our suite of tools for grassroots football clubs is enabling volunteer led clubs to engage supporters and generate revenue without experience of marketing or sales. We've partnered with FA Coaches and Welfare Officers to provide quality tools promoting development for both adults and children within a safe and enjoyable environment.</div>
-      </div>
-      <div class="portfolio__item">
-        <%= image_tag 'preowned-cycles.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">
-          <%= link_to 'Preowned Cycles', 'https://www.preownedcycles.co.uk' %>
-        </h2>
-        <div class="portfolio__summary">Launched in 2011 as an online marketplace for used cycles, the platform has gone on to attract a five-figure membership. We have recently acquired the platform from its founder and hope to revitalise the business and software behind the marketplace to engage with a broader userbase across wider platforms.</div>
-      </div>
+<section class="experience split-layout">
+  <div class="split-layout-secondary">
+    <%= image_tag 'startup-photos.jpg', class: 'section-hero-image' %>
+  </div>
+  <div class="split-layout-primary">
+    <div class="split-layout-primary-wrapper">
+      <h1 class="title-primary">Experience and skills you need.</h1>
+      <p>We've produced top quality applications with hundreds of clients for more than 12 years. From one person startups to Fortune 500 enterprises, universities, and non-profits. This is our purpose, and here's what we can do for you.</p>
+      <ul class="service-list">
+        <li class="service-item">
+          <h2 class="title-secondary service-design">
+            <i class="fa fa-fw fa-lock"></i>
+            <%= link_to 'Software Development', '/services/custom-software-development/' %>
+          </h2>
+          <ul>
+            <li><%= link_to 'Ruby on Rails', '/services/ruby-on-rails/' %></li>
+            <li>Elixir / Phoenix</li>
+            <!--<li><%= link_to 'Elixir / Phoenix', '/services/elixir-phoenix/' %></li>-->
+            <li>Swift for iOS</li>
+            <!--<li><%= link_to 'Swift for iOS', '/services/swift-ios/' %></li>-->
+            <li>Android</li>
+            <!--<li><%= link_to 'Android', '/services/android/' %></li>-->
+            <li>React / React Native</li>
+            <!--<li><%= link_to 'React / React Native', '/services/react/' %></li>-->
+            <li><%= link_to 'MVP / Product Launch', '/services/mvp-product-launch/' %></li>
+          </ul>
+        </li>
+        <li class="service-item">
+          <h2 class="title-secondary service-development">
+            <i class="fa fa-fw fa-terminal"></i>
+            Product Design
+          </h2>
+          <ul>
+            <li>Mobile Apps</li>
+            <!--<li><%= link_to 'Mobile Apps', '/services/mobile-apps/' %></li>-->
+            <li>Websites</li>
+            <!--<li><%= link_to 'Websites', '/services/websites/' %></li>-->
+            <li>Ecommerce</li>
+            <!--<li><%= link_to 'Ecommerce', '/services/ecommerce/' %></li>-->
+            <li><%= link_to 'Embedded Software', '/services/embedded-software-development/' %></li>
+            <li>Logos &amp; Branding</li>
+            <!--<li><%= link_to 'Logos & Branding', '/services/logos-branding/' %></li>-->
+            <li>UI / UX</li>
+            <!--<li><%= link_to 'UI / UX', '/services/ui-ux/' %></li>-->
+          </ul>
+        </li>
+        <li class="service-item">
+          <h2 class="title-secondary service-marketing">
+            <i class="fa fa-fw fa-users"></i>
+            Marketing &amp; Growth
+          </h2>
+          <ul>
+            <li>Business Marketing</li>
+            <!--<li><%= link_to 'Business Marketing', '/services/business-marketing/' %></li>-->
+            <li>SEO</li>
+            <li>Email &amp; SMS campaigns</li>
+            <li>User growth</li>
+            <li>Lead generation</li>
+          </ul>
+        </li>
+        <li class="service-item">
+          <h2 class="title-secondary service-support">
+            <i class="fa fa-fw fa-server"></i>
+            Consulting &amp; Support
+          </h2>
+          <ul>
+            <li><%= link_to 'Amazon Web Services', '/services/aws-consulting/' %></li>
+            <li>Product management</li>
+            <li>Business development</li>
+            <li>Fundraising</li>
+          </ul>
+        </li>
+      </ul>
+      <% link_to "#", class:"button-primary" do %>
+        Claim your 10 point Startup Healthcheck
+      <% end %>
     </div>
   </div>
-</div>
+</section>
 
-<div class="awards">
-  <div class="container">
-    <h1 class="heading heading--h1">Awards &amp; Accreditations</h1>
-    <div class="portfolio">
-      <div class="portfolio__item">
-        <%= image_tag 'startup-award-2012.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">Startup of the Year 2012</h2>
-        <div class="portfolio__summary">As co-founder and Product Development Director of one of East Anglia's brightest digital agencies in 2010, our Managing Director knows what it takes to build a successful startup. Creative Intent went on to collect the award for Startup of the Year at the 2012 East Anglian Business Awards and completed a successful exit in 2014.</div>
-      </div>
-      <div class="portfolio__item">
-        <%= image_tag 'aws-certified.png', class: "portfolio__image" %>
-        <h2 class="heading heading--h2">Amazon Web Services</h2>
-        <div class="portfolio__summary">We take DevOps and reliability seriously. Our engineers hold the latest Developer and Solutions Architect accreditations with Amazon Web Services allowing us to provide professional and robust software solutions to our customers. Let us take your business into the cloud with uptime and security in mind.</div>
-      </div>
+<section class="start-your-project split-layout">
+  <div class="split-layout-secondary">
+    foo
+  </div>
+  <div class="split-layout-primary">
+    <div class="split-layout-primary-wrapper">
+      <h1 class="title-primary">This is a catchy sales pitch to draw users in.</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur diam eros, pharetra in luctus aliquet, varius quis nibh. Donec eros nulla, lobortis quis quam vitae, euismod iaculis arcu.</p>
+      <% link_to "#", class:"button-primary" do %>
+        Start your project today <i class="fa fa-arrow-right fa-fw"></i>
+      <% end %>
     </div>
   </div>
-</div>
+</section>

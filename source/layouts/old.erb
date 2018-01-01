@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <% if build? %>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-107499549-1"></script>
+      <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', 'UA-107499549-1');
+      </script>
+    <% end %>
+
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+
+    <meta name="google-site-verification" content="MMUllopXGNmi7JoMUzCFbc-Y2NISDq_PIbq-W1PAGfc" />
+
+    <meta property="fb:app_id" content="127232564600204" />
+    <meta property="og:title" content="<%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %>" />
+    <meta property="og:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>" />
+    <meta property="og:site_name" content="Startup Heroes" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= current_page.data.url || "http://www.startupheroes.co.uk/" %>" />
+    <meta property="og:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>" />
+    <meta property="og:image:width" content="559" />
+    <meta property="og:image:height" content="157" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@startupheroesuk">
+    <meta name="twitter:title" content="<%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %>">
+    <meta name="twitter:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>">
+    <meta name="twitter:creator" content="@startupheroesuk">
+    <meta name="twitter:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>">
+
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-1593838522163001",
+        enable_page_level_ads: true
+      });
+
+      (function(d,h,w){var convertfox=w.convertfox=w.convertfox||[];convertfox.methods=['trackPageView','identify','track','setAppId'];convertfox.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);convertfox.push(e);return convertfox;}};for(var i=0;i<convertfox.methods.length;i++){var c=convertfox.methods[i];convertfox[c]=convertfox.factory(c)}s=d.createElement('script'),s.src="//d3sjgucddk68ji.cloudfront.net/convertfox.min.js",s.async=!0,e=d.getElementsByTagName(h)[0],e.appendChild(s),s.addEventListener('load',function(e){},!1),convertfox.setAppId("y376sy63"),convertfox.trackPageView()})(document,'head',window);
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <p>Got an <strong>idea</strong> &amp; <strong>funding</strong> but don't know where to start?</p>
+          <p>Ready to <strong>increase productivity</strong> with <strong>bespoke software</strong>?</p>
+          <p>Are your development team the <strong>bottleneck</strong> in your software project?</p>
+          <p><strong>We've been there!</strong> Our experienced team are ready to help you take the next steps.</p>
+        </div>
+        <a href="mailto:hello@startupheroes.co.uk" class="button button--call-to-action">Email Us Now</a>
+      </div>
+    </header>
+    <div class="container">
+      <div class="brand">
+        <%= image_tag 'startup-heroes-logo.png', class: 'brand__image' %>
+      </div>
+    </div>
+    <%= yield %>
+    <footer class="footer">
+      <div class="container">
+        <div>
+          <a class="button button--call-to-action" style="background-color: #36C347;" href="mailto:hello@startupheroes.co.uk">Email Us Now</a>
+        </div>
+        <div class="footer__copyright">
+          Startup Heroes &copy; <%= Date.today.year %> -  Registered in England &amp; Wales 10859977
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
