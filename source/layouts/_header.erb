@@ -1,0 +1,15 @@
+<header class="application-header">
+  <% link_to '#', class: 'application-nav-toggle' do %>
+    <!--<i class="fa fa-bars"></i>-->
+  <% end %>
+  <% link_to '/', class: 'application-nav-logo' do %>
+    <% if current_page.data.header == "light" %>
+      <%= image_tag 'startup-heroes-logo.png', class: 'image startup-heroes' %>
+    <% else %>
+      <%= image_tag 'startup-heroes-logo-dark.png', class: 'image startup-heroes' %>
+    <% end %>
+  <% end %>
+  <% link_to '/hire-us/', class: 'application-nav-hire-us' do %>
+    Hire us
+  <% end %>
+</header>

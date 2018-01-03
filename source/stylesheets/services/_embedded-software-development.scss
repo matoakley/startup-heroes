@@ -1,0 +1,23 @@
+.services_embedded-software-development {
+  background-image: url(/images/services/embedded-software/embedded-software-bg.png),linear-gradient(#29292c, #204E1B);
+
+  .main-content {
+    h1 {
+      color: #ffc952;
+    }
+
+    .embedded-heart {
+      display: block;
+      margin: 2rem auto 0 auto;
+      width: 100%;
+
+      @media (min-width: $large-screen) {
+        margin: 0 auto;
+        height: 400px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+

@@ -1,0 +1,24 @@
+.services_aws-consulting {
+  background-image: url(/images/services/aws-consulting/aws-consulting-bg.png), radial-gradient(circle at 80% 25%, #eeb740, #e47911);
+
+  .main-content {
+    h1 {
+      font-family: 'Carter One', cursive;
+      font-size: 1.8rem;
+      font-weight: 400;
+      text-align: center;
+    }
+
+    .cloud {
+      display: block;
+      margin: 2rem auto 0 auto;
+      width: 100%;
+
+      @media (min-width: $large-screen) {
+        margin: 0 auto;
+        height: 300px;
+        width: 500px;
+      }
+    }
+  }
+}

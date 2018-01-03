@@ -1,162 +1,245 @@
 @import 'normalize.css';
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,600|Open+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Bungee');
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
 
-$color-primary--light: #7AC8CF;
+
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,600|Lato:400,700');
+
+@import 'split-layout';
+
+$text-color: #3D3E44;
+$highlight-color: #ED2419;
+
+$medium-screen: 768px;
+$large-screen: 1024px;
+
+@import 'header';
+@import 'footer';
+@import 'services/services';
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
 body {
-  background-color: #07666F;
-  color: white;
-  font-family: "Open Sans", sans-serif;
+  font: {
+    family: 'Lato', sans-serif;
+    size: 1rem;
+  }
+  line-height: 1.7;
+  min-height: 100vh;
+  color: $text-color;
+  -webkit-font-feature-settings: "kern", "liga", "pnum";
+  font-feature-settings: "kern", "liga", "pnum";
+  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  border-bottom: dotted 1px white;
-  color: white;
-  text-decoration: none;
-  transition: color 1s ease-out;
+strong {
+  font-weight: 700;
 }
 
-.header {
-  background-color: #118690;
-  padding: 25px 0;
+.image {
+  image-rendering: crisp-edges;
+}
 
-  &__content {
-    font-size: 20px;
-    font-weight: 200;
-    margin-bottom: 50px;
+.hero {
+  min-height: 48vh;
 
-    strong {
-      font-weight: 600;
+  .split-layout-secondary {
+    background-image: linear-gradient(#07666F, #118590);
+  }
+
+  &-inner-shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    -webkit-box-shadow: inset -4px 0 8px rgba(0,0,0,0.1);
+    box-shadow: inset -4px 0 8px rgba(0,0,0,0.1);
+  }
+
+  &-project-image {
+    background-size: auto 100%;
+    bottom: 0;
+    height: 70vmin;
+    margin: {
+      bottom: 9vh;
+      right: -35vmin;
+    }
+    position: absolute;
+    right: 0;
+    transform: translateX(-95%) translateY(1rem) rotateZ(-11deg);
+    width: 35vmin;
+  }
+
+  .button-primary {
+    background-color: white;
+    color: $highlight-color;
+  }
+}
+
+.title-primary {
+  font: {
+    family: 'Libre Franklin', sans-sefif;
+    weight: 200;
+  }
+  line-height: 1.2;
+}
+
+.title-secondary {
+  font: {
+    family: 'Libre Franklin', sans-sefif;
+    size: 0.8em;
+    weight: 600;
+  }
+  text-transform: uppercase;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.button-primary {
+  appearance: none;
+  background-color: $highlight-color;
+  border: 0;
+  color: white;
+  display: inline-block;
+  font: {
+    size: 0.9em;
+    weight: 700;
+  }
+  line-height: 1;
+  margin-top: 1.5rem;
+  padding: 1rem 1.5rem;
+  text: {
+    align: center;
+    decoration: none;
+  }
+  user-select: none;
+  vertical-align: middle;
+}
+
+.copyright{
+  font-size: 0.9rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.start-your-project {
+  background-color: #29292c;
+  border-bottom: 1px solid #494a51;
+  color: #b5b5c0;
+}
+
+.section-hero-image {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.experience {
+  .title-primary {
+    color: $highlight-color;
+  }
+}
+
+.service-list {
+  list-style: none;
+  margin: 3rem 0 0 0;
+  padding: 0;
+}
+
+.service-item {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+
+  &:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  ul {
+    font-size: 0.9rem;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    margin-left: 1.5rem;
+    padding: 0;
+
+    a {
+      border-bottom: dotted 1px $text-color;
+      color: $text-color;
+      text-decoration: none;
+      transition: all 0.5s ease-out;
+
+      &:hover {
+        border-color: $highlight-color;
+        color: $highlight-color;
+      }
     }
   }
 }
 
-.button {
-  border-bottom: none;
-  display: block;
-  font: {
-    family: "Libre Franklin", sans-serif;
-    weight: 600;
-  }
-  text-decoration: none;
-  transition: background-color 1s ease-out;
-  text-align: center;
+.service-design {
+  color: #21439F;
 
-  &--call-to-action {
-    background-color: #ED7D19;
+  a {
+    text-decoration: none;
+    color: #21439F;
+  }
+}
+
+.service-development {
+  color: #EDA919;
+
+  a {
+    text-decoration: none;
+    color: #EDA919;
+  }
+}
+
+.service-marketing {
+  color: #118590;
+
+  a {
+    text-decoration: none;
+    color: #118590;
+  }
+}
+
+.service-support {
+  color: #ED7D19;
+
+  a {
+    text-decoration: none;
+    color: #ED7D19;
+  }
+}
+
+//
+// index
+//
+
+.index {
+  .hero {
+    background-color: #118690;
+    background-image: radial-gradient(circle at 80% 25%, #2D8E97, #07666F);
     color: white;
-    font-size: 18px;
-    line-height: 3;
-    padding: 0 25px;
-
-    &:hover {
-      background-color: #FB4F46;
-      color: white;
-    }
+    min-height: 96vh;
   }
 }
 
-.container {
-  padding: 0 25px;
-}
-
-p {
-  margin-top: 0;
-}
-
-.heading {
-  font: {
-    family: "Libre Franklin", sans-serif;
-    weight: 600;
-  }
-  margin-top: 0;
-
-  &--h1 {
-    margin-bottom: 25px;
-  }
-
-  &--h2 {
-    line-height: 1.3;
-    margin-bottom: 15px;
-  }
-}
-
-.brand {
-  margin-top: 50px;
-  width: 200px;
-
-  &__image {
-    width: 100%;
-  }
-}
-
-.portfolio {
-  display: block;
-
-  &__item {
-    margin-bottom: 50px;
-  }
-
-  &__image {
-    margin-bottom: 15px;
-    width: 100%;
-  }
-
-  &__summary {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-}
-
-.experience, .products, .awards {
-  padding: 50px 0;
-}
-
-.products {
-  background-color: #EDA919;
-}
-
-.footer {
-  background-color: #FB4F46;
-  padding: 50px 0;
-  text-align: left;
-
-  &__copyright {
-    margin-top: 50px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    margin: 0 auto;
-    width: 1168px;
-  }
-
-  .button {
-    display: inline-block;
-  }
-
-  .header {
-    padding: 50px 0;
-
-    &__content {
-      margin-bottom: 50px;
-    }
-  }
-
-  .portfolio {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    &__item {
-      width: 559px;
-    }
-
-    &__image {
-      margin-bottom: 25px;
-    }
-  }
-}

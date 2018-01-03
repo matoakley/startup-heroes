@@ -1,0 +1,58 @@
+.application-header{
+  display: flex;
+  align-items: center;
+  padding: {
+    bottom: 1.5rem;
+    top: 1.5rem;
+  }
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 10;
+
+  @media (min-width: $large-screen) {
+    text-align: left;
+  }
+}
+
+.application-nav-logo {
+  flex: 1;
+
+  @media (min-width: $large-screen) {
+    margin-left: 3rem;
+  }
+}
+
+.application-nav-toggle {
+  color: white;
+  padding: 0 2rem;
+  text-align: left;
+  width: 120px;
+
+  @media (min-width: $large-screen) {
+    display: none;
+  }
+}
+
+.application-nav-hire-us {
+  color: white;
+  font-size: 0.9rem;
+  padding: 0 2rem;
+  text-align: right;
+  text-decoration: none;
+  width: 120px;
+
+  @media (min-width: $large-screen) {
+    display: none;
+  }
+}
+
+.startup-heroes {
+  color: white;
+  height: 3rem;
+
+  @media (min-width: $large-screen) {
+    height: auto;
+    width: 160px;
+  }
+}

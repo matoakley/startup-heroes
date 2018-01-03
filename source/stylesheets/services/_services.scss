@@ -1,0 +1,55 @@
+.services {
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+
+  .main-content {
+    color: rgba(255,255,255,0.75);
+
+    .wrap {
+      margin: 0 auto;
+      font-size: 1.2rem;
+      line-height: 1.4;
+      padding: 6rem 3rem 3rem 3rem;
+      width: 100%;
+
+      @media (min-width: $large-screen) {
+        width: 500px;
+        padding: 10rem 0;
+      }
+    }
+
+    a {
+      color: #ffc952;
+      text-decoration: none;
+    }
+
+    h1 {
+      color: white;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin: 3rem 0;
+
+      @media (min-width: $large-screen) {
+        margin: 5rem 0 3rem 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .button-primary {
+      background-color: white;
+      color: $highlight-color;
+      line-height: 1.4;
+      margin-top: 3rem;
+    }
+  }
+}
+
+@import 'aws-consulting';
+@import 'custom-software-development';
+@import 'embedded-software-development';
+@import 'ruby-on-rails';

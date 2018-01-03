@@ -17,8 +17,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><%= current_page.data.title %></title>
     <meta name="description" content="<%= current_page.data.description %>" />
-    <%= stylesheet_link_tag "new" %>
-    <%= javascript_include_tag "new" %>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
 
     <meta name="google-site-verification" content="MMUllopXGNmi7JoMUzCFbc-Y2NISDq_PIbq-W1PAGfc" />
 
@@ -40,26 +40,10 @@
     <meta name="twitter:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>">
   </head>
   <body class="<%= page_classes %>">
-    <header class="application-header">
-      <% link_to '/', class: 'application-nav-logo' do %>
-        <% if current_page.data.header == "light" %>
-          <%= image_tag 'startup-heroes-logo.png', class: 'image startup-heroes' %>
-        <% else %>
-          <%= image_tag 'startup-heroes-logo-dark.png', class: 'image startup-heroes' %>
-        <% end %>
-      <% end %>
-    </header>
+    <%= partial 'layouts/header' %>
     <main class="application-main-content">
       <%= yield %>
     </main>
-    <footer class="application-footer">
-      <div class="footer-content">
-      </div>
-      <div class="copyright">
-        <strong>&copy; <%= Date.today.year %> Startup Heroes Ltd</strong>
-        <p>Registered in England &amp; Wales 10859977</p>
-      </div>
-    </footer>
+    <%= partial 'layouts/footer' %>
   </body>
 </html>
-
