@@ -1,15 +1,15 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-#activate :imageoptim
+activate :directory_indexes
+
+activate :imageoptim
 
 activate :robots, sitemap: 'https://www.startupheroes.co.uk/sitemap.xml'
 
 activate :seo_sitemap do |sitemap|
   sitemap.default_host = 'https://www.startupheroes.co.uk'
 end
-
-activate :directory_indexes
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -43,11 +43,15 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def hire_us_post_url
+    if build?
+      'https://www.formdump.com/f/ay4XKdrb'
+    else
+      'http://localhost:3000/f/2bLD'
+    end
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
