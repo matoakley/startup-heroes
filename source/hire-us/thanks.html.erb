@@ -1,4 +1,23 @@
 ---
+title: Thanks for your enquiry - Startup Heroes
+header: light
 include_in_sitemap: false
+hide_footer_call_to_action: true
 ---
-thanks for submitting your enquiry, we'll be in touch
+<section class="experience split-layout">
+  <div class="split-layout-secondary">
+    <%= image_tag 'business-consultant.jpeg', class: 'section-hero-image' %>
+  </div>
+  <div class="split-layout-primary main-content">
+    <h1>Thanks for your enquiry, one of our Heroes will contact you soon!</h1>
+    <p>
+    We promise not to keep you waiting too long whilst we review your enquiry.
+    In the meantime, why not review some of our latest case studies?
+    </p>
+    <ul>
+      <li><%= link_to 'European Golf Machinery', '/case-studies/european-golf-machinery/' %></li>
+      <li><%= link_to 'Form Dump', '/case-studies/form-dump/' %></li>
+      <li><%= link_to 'Preowned Cycles', '/case-studies/preowned-cycles/' %></li>
+    </ul>
+  </div>
+</section>

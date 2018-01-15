@@ -2,15 +2,16 @@
 
 @import url('https://fonts.googleapis.com/css?family=Bungee');
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,600|Lato:400,700');
 
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,600|Lato:400,700');
-
 @import 'split-layout';
 
+$brand-primary-color: #1c868f;
+$brand-secondary-color: #eb7d2b;
 $text-color: #3D3E44;
 $highlight-color: #ED2419;
 
@@ -19,6 +20,7 @@ $large-screen: 1024px;
 
 @import 'header';
 @import 'footer';
+@import 'hire-us';
 @import 'services/services';
 
 *, *:before, *:after {
@@ -108,6 +110,7 @@ strong {
   background-color: $highlight-color;
   border: 0;
   color: white;
+  cursor: pointer;
   display: inline-block;
   font: {
     size: 0.9em;

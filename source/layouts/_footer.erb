@@ -1,18 +1,48 @@
-<section class="start-your-project split-layout">
-  <div class="split-layout-secondary">
-  </div>
-  <div class="split-layout-primary">
-    <div class="split-layout-primary-wrapper">
-      <h1 class="title-primary">Let's build something great together!</h1>
-      <p>We're working with some great companies and we'd love to add your startup to that list. Get in touch today for a free consultation with one of our Heroes.</p>
-      <% link_to "/hire-us/", class:"button-primary" do %>
-        Start your project today <i class="fa fa-arrow-right fa-fw"></i>
-      <% end %>
+<% unless current_page.data.hide_footer_call_to_action %>
+  <section class="start-your-project split-layout">
+    <div class="split-layout-secondary">
+      <%= image_tag 'lets-build-something.png', class: 'section-hero-image' %>
     </div>
-  </div>
-</section>
+    <div class="split-layout-primary">
+      <div class="split-layout-primary-wrapper">
+        <h1 class="title-primary">Let's build something great together!</h1>
+        <p>We're working with some great companies and we'd love to add your startup to that list. Get in touch today for a free consultation with one of our Heroes.</p>
+        <% link_to "/hire-us/", class:"button-primary" do %>
+          Start your project today <i class="fa fa-arrow-right fa-fw"></i>
+        <% end %>
+      </div>
+    </div>
+  </section>
+<% end %>
 <footer class="application-footer">
   <div class="footer-content">
+    <div class="footer-section">
+      <h6><%= link_to 'Services', '/services/' %></h6>
+      <ul>
+        <li><%= link_to 'Custom Software Development', '/services/custom-software-development/' %></li>
+        <li><%= link_to 'Ruby on Rails', '/services/ruby-on-rails/' %></li>
+        <li><%= link_to 'Embedded Software', '/services/embedded-software-development/' %></li>
+        <li><%= link_to 'AWS Consulting', '/services/aws-consulting/' %></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h6>Case Studies</h6>
+      <ul>
+        <li><%= link_to 'Form Dump', '/case-studies/form-dump/' %></li>
+        <li><%= link_to 'European Golf Machinery', '/case-studies/european-golf-machinery/' %></li>
+        <li><%= link_to 'Preowned Cycles', '/case-studies/preowned-cycles/' %></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h6>Contact</h6>
+      <ul>
+        <li><%= link_to 'Hire Us', '/hire-us/' %></li>
+        <li><%= link_to 'hello@startupheroes.co.uk', 'mailto:hello@startupheroes.co.uk' %></li>
+        <li><%= link_to 'UK: +44 (0)20 3917 4860', 'tel:+442039174860' %></li>
+        <li><%= link_to 'Twitter', 'https://twitter.com/startupheroesuk' %></li>
+        <li><%= link_to 'Github', 'https://github.com/startupheroesuk' %></li>
+      </ul>
+    </div>
   </div>
   <div class="copyright">
     <strong>&copy; 2017 - <%= Date.today.year %> Startup Heroes Ltd</strong>
