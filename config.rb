@@ -1,6 +1,13 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+config[:host] = "http://localhost:4567"
+
+activate :blog do |blog|
+  blog.sources = "blog/{year}-{month}-{day}-{title}.html"
+  blog.permalink = "blog/{title}"
+end
+
 activate :directory_indexes
 
 activate :imageoptim
@@ -57,6 +64,7 @@ end
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :build do
+  config[:host] = "https://www.startupheroes.co.uk"
   activate :minify_css
   activate :minify_javascript
 end

@@ -1,0 +1,49 @@
+.blog {
+  .application-main-content {
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.4;
+    padding: 6rem 3rem 3rem 3rem;
+    width: 100%;
+
+    @media (min-width: $large-screen) {
+      width: 600px;
+      padding: 10rem 0;
+    }
+
+    a {
+      color: $brand-primary-color;
+      text-decoration: none;
+      transition: color 0.5s ease-out;
+
+      &:hover {
+        color: $brand-secondary-color;
+      }
+    }
+
+    .blog-title {
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      text-align: center;
+    }
+
+
+    .blog-image {
+      margin: 2rem 0;
+      width: 100%;
+
+      &--main {
+        margin-top: 0;
+      }
+
+      @media (min-width: $large-screen) {
+
+      }
+    }
+
+    .button-primary {
+      color: white;
+    }
+  }
+}

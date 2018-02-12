@@ -16,3 +16,5 @@ gem 'middleman-seo_sitemap', path: '~/Projects/startup-heroes/middleman/middlema
 gem 'middleman-robots'
 
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
+
+gem "middleman-blog", "~> 4.0"

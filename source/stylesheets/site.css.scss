@@ -4,11 +4,8 @@
 @import url('https://fonts.googleapis.com/css?family=Carter+One');
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:200,600|Lato:400,700');
 
-
 @import "font-awesome-sprockets";
 @import "font-awesome";
-
-@import 'split-layout';
 
 $brand-primary-color: #1c868f;
 $brand-secondary-color: #eb7d2b;
@@ -18,9 +15,13 @@ $highlight-color: #ED2419;
 $medium-screen: 768px;
 $large-screen: 1024px;
 
+@import 'split-layout';
+
 @import 'header';
 @import 'footer';
 @import 'hire-us';
+@import 'index';
+@import 'blog';
 @import 'services/services';
 
 *, *:before, *:after {
@@ -48,43 +49,6 @@ strong {
 
 .image {
   image-rendering: crisp-edges;
-}
-
-.hero {
-  min-height: 48vh;
-
-  .split-layout-secondary {
-    background-image: linear-gradient(#07666F, #118590);
-  }
-
-  &-inner-shadow {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    -webkit-box-shadow: inset -4px 0 8px rgba(0,0,0,0.1);
-    box-shadow: inset -4px 0 8px rgba(0,0,0,0.1);
-  }
-
-  &-project-image {
-    background-size: auto 100%;
-    bottom: 0;
-    height: 70vmin;
-    margin: {
-      bottom: 9vh;
-      right: -35vmin;
-    }
-    position: absolute;
-    right: 0;
-    transform: translateX(-95%) translateY(1rem) rotateZ(-11deg);
-    width: 35vmin;
-  }
-
-  .button-primary {
-    background-color: white;
-    color: $highlight-color;
-  }
 }
 
 .title-primary {
@@ -140,109 +104,3 @@ strong {
   border-bottom: 1px solid #494a51;
   color: #b5b5c0;
 }
-
-.section-hero-image {
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  max-width: 100%;
-  object-fit: cover;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 100%;
-}
-
-.experience {
-  .title-primary {
-    color: $highlight-color;
-  }
-}
-
-.service-list {
-  list-style: none;
-  margin: 3rem 0 0 0;
-  padding: 0;
-}
-
-.service-item {
-  float: left;
-  display: block;
-  margin-right: 2.35765%;
-  width: 48.82117%;
-
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
-
-  ul {
-    font-size: 0.9rem;
-    list-style: none;
-    margin: 0;
-    margin-bottom: 1.5rem;
-    margin-left: 1.5rem;
-    padding: 0;
-
-    a {
-      border-bottom: dotted 1px $text-color;
-      color: $text-color;
-      text-decoration: none;
-      transition: all 0.5s ease-out;
-
-      &:hover {
-        border-color: $highlight-color;
-        color: $highlight-color;
-      }
-    }
-  }
-}
-
-.service-design {
-  color: #21439F;
-
-  a {
-    text-decoration: none;
-    color: #21439F;
-  }
-}
-
-.service-development {
-  color: #EDA919;
-
-  a {
-    text-decoration: none;
-    color: #EDA919;
-  }
-}
-
-.service-marketing {
-  color: #118590;
-
-  a {
-    text-decoration: none;
-    color: #118590;
-  }
-}
-
-.service-support {
-  color: #ED7D19;
-
-  a {
-    text-decoration: none;
-    color: #ED7D19;
-  }
-}
-
-//
-// index
-//
-
-.index {
-  .hero {
-    background-color: #118690;
-    background-image: radial-gradient(circle at 80% 25%, #2D8E97, #07666F);
-    color: white;
-    min-height: 96vh;
-  }
-}
-

@@ -1,11 +1,21 @@
 .split-layout {
   display: flex;
+  flex-direction: column;
   min-height: 580px;
+
+  @media (min-width: $large-screen) {
+    flex-direction: row;
+  }
 
   &-primary {
     align-self: center;
-    padding: 6rem;
-    width: 60%;
+    padding: 8rem 3rem 3rem;
+    width: 100%;
+
+    @media (min-width: $large-screen) {
+      padding: 6rem;
+      width: 60%;
+    }
   }
 
   &-primary-wrapper {
@@ -14,15 +24,19 @@
   }
 
   &-secondary {
-    align-items: center;
-    display: flex;
-    flex: {
-      direction: column;
-      grow: 1;
+    display: none;
+
+    @media (min-width: $large-screen) {
+      align-items: center;
+      display: flex;
+      flex: {
+        direction: column;
+        grow: 1;
+      }
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+      width: 40%;
     }
-    justify-content: center;
-    overflow: hidden;
-    position: relative;
-    width: 40%;
   }
 }

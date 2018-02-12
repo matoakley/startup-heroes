@@ -27,7 +27,7 @@
     <meta property="og:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>" />
     <meta property="og:site_name" content="Startup Heroes" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= current_page.data.url || "http://www.startupheroes.co.uk/" %>" />
+    <meta property="og:url" content="<%= config[:host] + current_page.url %>" />
     <meta property="og:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>" />
     <meta property="og:image:width" content="559" />
     <meta property="og:image:height" content="157" />
@@ -45,5 +45,15 @@
       <%= yield %>
     </main>
     <%= partial 'layouts/footer' %>
+    <% if build? %>
+    <script>
+      (function(w,d,t,u,n,a,m){w['MauticTrackingObject']=n;
+          w[n]=w[n]||function(){(w[n].q=w[n].q||[]).push(arguments)},a=d.createElement(t),
+          m=d.getElementsByTagName(t)[0];a.async=1;a.src=u;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://crm.startupheroes.co.uk/mtc.js','mt');
+
+      mt('send', 'pageview');
+    </script>
+    <% end %>
   </body>
 </html>
