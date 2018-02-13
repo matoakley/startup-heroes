@@ -15,6 +15,7 @@ hide_footer_call_to_action: true
     In the meantime, why not review some of our latest case studies?
     </p>
     <ul>
+      <% blog.articles[0...3].each do |article| %>
       <li><%= link_to 'European Golf Machinery', '/case-studies/european-golf-machinery/' %></li>
       <li><%= link_to 'Form Dump', '/case-studies/form-dump/' %></li>
       <li><%= link_to 'Preowned Cycles', '/case-studies/preowned-cycles/' %></li>

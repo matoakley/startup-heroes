@@ -23,21 +23,19 @@
     <meta name="google-site-verification" content="MMUllopXGNmi7JoMUzCFbc-Y2NISDq_PIbq-W1PAGfc" />
 
     <meta property="fb:app_id" content="127232564600204" />
-    <meta property="og:title" content="<%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %>" />
+    <meta property="og:title" content="<%= current_page.data.title || "Startup consulting & custom software development company - Startup Heroes" %>" />
     <meta property="og:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>" />
     <meta property="og:site_name" content="Startup Heroes" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="<%= config[:host] + current_page.url %>" />
-    <meta property="og:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>" />
-    <meta property="og:image:width" content="559" />
-    <meta property="og:image:height" content="157" />
+    <meta property="og:image" content="<%= current_page.data.og_image || "https://www.startupheroes.co.uk/images/aws-certified.png"%>" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@startupheroesuk">
-    <meta name="twitter:title" content="<%= current_page.data.title || "Startup Heroes / Web & iOS / Design & Development Consulting / Ipswich, UK" %>">
+    <meta name="twitter:title" content="<%= current_page.data.title || "Startup consulting & custom software development company - Startup Heroes" %>">
     <meta name="twitter:description" content="<%= current_page.data.description || "Launched in 2017, Startup Heroes is a collective of experienced product development experts available for hire. We specialise in helping startups that lack in-house technical expertise to channel their funds successfully in order to achieve an MVP and raise further funding." %>">
     <meta name="twitter:creator" content="@startupheroesuk">
-    <meta name="twitter:image" content="<%= current_page.data.image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>">
+    <meta name="twitter:image" content="<%= current_page.data.og_image || "http://www.startupheroes.co.uk/images/aws-certified.png"%>">
   </head>
   <body class="<%= page_classes %>">
     <%= partial 'layouts/header' %>

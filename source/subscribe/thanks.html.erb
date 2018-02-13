@@ -1,0 +1,24 @@
+---
+title: Thanks for subscribing - Startup Heroes
+header: light
+include_in_sitemap: false
+hide_footer_call_to_action: true
+---
+<section class="experience split-layout">
+  <div class="split-layout-secondary">
+    <%= image_tag 'business-consultant.jpeg', class: 'section-hero-image' %>
+  </div>
+  <div class="split-layout-primary main-content">
+    <h1>Thanks for subscribing, you'll start receiving news and articles to your inbox soon!</h1>
+    <p>
+    You don't have to wait to start learning though. Here are a selection of
+    recent posts for you to start reading right away.
+    </p>
+    <ul>
+      <% blog.articles[0...3].each do |article| %>
+        <li><%= link_to article.title, article.url %></li>
+      <% end %>
+    </ul>
+  </div>
+</section>
+

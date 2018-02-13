@@ -18,3 +18,5 @@ gem 'middleman-robots'
 gem "middleman-imageoptim", :git => "https://github.com/plasticine/middleman-imageoptim", :branch => "master"
 
 gem "middleman-blog", "~> 4.0"
+
+gem 'nokogiri', '~> 1.8', '>= 1.8.2'

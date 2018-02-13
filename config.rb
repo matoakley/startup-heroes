@@ -6,6 +6,8 @@ config[:host] = "http://localhost:4567"
 activate :blog do |blog|
   blog.sources = "blog/{year}-{month}-{day}-{title}.html"
   blog.permalink = "blog/{title}"
+  blog.paginate = true
+  blog.per_page = 10
 end
 
 activate :directory_indexes
@@ -56,6 +58,14 @@ helpers do
       'https://www.formdump.com/f/ay4XKdrb'
     else
       'http://localhost:3000/f/2bLD'
+    end
+  end
+
+  def blog_subscribe_post_url
+    if build?
+      'https://www.formdump.com/f/8LdmqdrK'
+    else
+      'http://localhost:3000/f/2AX6'
     end
   end
 end

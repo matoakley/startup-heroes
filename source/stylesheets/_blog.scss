@@ -45,5 +45,58 @@
     .button-primary {
       color: white;
     }
+
+    .blog-subscribe {
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      text-align: center;
+
+      .button-primary {
+        margin: 0;
+      }
+
+      &__email {
+        flex: 1;
+        padding: 0 1rem;
+      }
+
+      &__input {
+        display: flex;
+      }
+
+      &__intro {
+        margin-bottom: 2rem;
+      }
+    }
+
+    .mini-blog-post {
+      border-bottom: 1px solid #ddd;
+      padding: 3rem 0;
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      &__title {
+        color: $text-color;
+      }
+
+      &__summary {
+        font-size: 1rem;
+        margin: 1.5rem 0;
+      }
+    }
+
+    .pagination {
+      margin-top: 3rem;
+      text-align: center;
+    }
+  }
+
+  &.blog_index h1 {
+    margin: 0 0 3rem 0;
+    text-align: center;
   }
 }

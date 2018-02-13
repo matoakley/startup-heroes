@@ -1,0 +1,37 @@
+---
+title: Superpowers, Gadgets & Villains - A Blog by Startup Heroes
+description: Amazon Web Services offers the world's most poweful cloud computing platform. It's more than just web hosting, so much more. We have in-house certified developers and architects ready to provide AWS consulting to entrepreneurs and development teams.
+header: light
+pageable: true
+---
+<section class="main-content">
+  <div class="wrap">
+    <h1>Superpowers, Gadgets &amp; Villains</h1>
+
+    <%= partial 'blog/subscribe' %>
+
+    <% page_articles.each do |article| %>
+      <article class="mini-blog-post">
+        <h2>
+          <a class="mini-blog-post__title" href="<%= article.url %>"><%= article.title %></a>
+        </h2>
+        <div class="mini-blog-post__summary"><%= article.data.description %></div>
+        <div class="mini-blog-post__meta">
+          <%= link_to article.data.author, article.data.author_link %> - <%= article.date.strftime("%-d %B %Y") %>
+        </div>
+      </article>
+    <% end %>
+
+    <div class="pagination">
+      <% if prev_page %>
+        <%= link_to '&laquo; Previous Page', prev_page %>
+      <% end %>
+      <% if prev_page && next_page %>
+        -
+      <% end %>
+      <% if next_page %>
+        <%= link_to 'Next Page &raquo;', next_page %>
+      <% end %>
+    </div>
+  </div>
+</section>
